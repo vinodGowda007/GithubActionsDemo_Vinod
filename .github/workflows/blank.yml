@@ -1,0 +1,12 @@
+name: Hello world
+
+# trigger manually
+on: workflow_dispatch
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Step
+        run: echo"Welcome to GHA"
+        
