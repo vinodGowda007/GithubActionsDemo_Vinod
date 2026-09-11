@@ -4,11 +4,20 @@ name: Hello world
 on: workflow_dispatch
 
 jobs:
-  hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hello Step
-        run: | 
-          echo "Welcome to GHA line one"
-          echo "Welcome to GHA line two:"
-        
+   build:
+       runs-on: ubuntu-latest
+       steps:
+           - name: Build Step
+             run: echo "A demo build"
+   test:
+       runs-on: ubuntu-latest
+       steps:
+          - name: Test phase
+            run: echo "Running Test cases"
+
+   deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Deploy the app
+            run: echo "Deploying the app"
+
