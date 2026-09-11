@@ -10,5 +10,5 @@ jobs:
       - name: Hello Step
         run: | 
           echo "Welcome to GHA line one"
-          echo "Welcome to GHA line two:
+          echo "Welcome to GHA line two:"
         
