@@ -8,6 +8,8 @@ jobs:
        runs-on: ubuntu-latest
        steps:
            - name: Build Step
-             run: echo " Hello , ${{vars.My_Name}}"
+             run: |
+                echo " Hello , ${{vars.My_Name}}"
+                echo " Hello, ${{secrets.Docker_Password}} "
  
 
