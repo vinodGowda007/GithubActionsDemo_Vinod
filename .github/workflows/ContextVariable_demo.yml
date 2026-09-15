@@ -10,6 +10,8 @@ jobs:
         run: |
           echo "This workflow is triggered by ${{github.actor}}"
           echo "The repository name is ${{github.repository}}"
+          echo "The branch is ${{github.ref_name}}"
+          echo "The environment is ${{github.env}}"
 
       - name: Print all variable under github
         run: echo "${{toJson(github)}}"
