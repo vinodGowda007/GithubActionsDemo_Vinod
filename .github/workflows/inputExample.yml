@@ -1,0 +1,31 @@
+name: Input learning
+on: 
+  workflow_dispatch:
+  # Here i will be writing the input parameters
+    inputs: 
+      environment:
+        description: Choose the environment to deploy
+        required: true
+        default: dev
+        type: choice
+        options:
+          - dev
+          - test
+          - prod
+      artifact-tag:
+        description: Choose the git tag to deploy
+        required: true
+      
+  
+
+jobs:
+  input-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the app
+        run: echo " Deploying the ${{inputs.artifact-tag}} application to ${{inputs.environment}} "
+
+
+
+
+    
